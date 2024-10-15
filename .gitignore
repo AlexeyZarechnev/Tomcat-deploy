@@ -1,0 +1,8 @@
+# Maven
+effective-pom.xml
+target/*
+
+# IDE
+.vscode/*
+
+
