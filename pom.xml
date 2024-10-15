@@ -6,7 +6,7 @@
 
   <groupId>io.github.alexeyzarechnev</groupId>
   <artifactId>tomcat-deploy</artifactId>
-  <version>1.0-SNAPSHOT</version>
+  <version>0.1.0</version>
   <packaging>jar</packaging>
 
   <name>tomcat-deploy</name>
@@ -42,11 +42,6 @@
       <name>GitHub Packages</name>
       <url>https://maven.pkg.github.com/AlexeyZarechnev/Tomcat-deploy</url>
     </repository>
-    <snapshotRepository>
-      <id>github</id>
-      <name>GitHub Packages</name>
-      <url>https://maven.pkg.github.com/AlexeyZarechnev/Tomcat-deploy</url>
-    </snapshotRepository>
   </distributionManagement>
 
 </project>
