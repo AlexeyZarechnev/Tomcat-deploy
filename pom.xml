@@ -5,11 +5,11 @@
   <modelVersion>4.0.0</modelVersion>
 
   <groupId>io.github.alexeyzarechnev</groupId>
-  <artifactId>tomcat-deploy</artifactId>
-  <version>0.1.0</version>
+  <artifactId>tomcat-utils</artifactId>
+  <version>1.0.0</version>
   <packaging>jar</packaging>
 
-  <name>tomcat-deploy</name>
+  <name>tomcat-utils</name>
 
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -17,31 +17,21 @@
     <maven.compiler.target>1.8</maven.compiler.target>
   </properties>
 
-  <dependencies>
-  </dependencies>
-
   <build>
     <plugins>
      <plugin>
       <groupId>org.apache.maven.plugins</groupId>
       <artifactId>maven-jar-plugin</artifactId>
       <configuration>
+        <finalName>${project.name}</finalName>
         <archive>
           <manifest>
-            <mainClass>io.github.alexeyzarechnev.App</mainClass>
+            <mainClass>io.github.alexeyzarechnev.TomcatUtils</mainClass>
           </manifest>
         </archive>
       </configuration>
     </plugin>
    </plugins>
   </build>
-
-  <distributionManagement>
-    <repository>
-      <id>github</id>
-      <name>GitHub Packages</name>
-      <url>https://maven.pkg.github.com/AlexeyZarechnev/Tomcat-deploy</url>
-    </repository>
-  </distributionManagement>
 
 </project>

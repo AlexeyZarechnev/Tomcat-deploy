@@ -14,6 +14,25 @@ public class Config {
     private File deployment;
     private final String currentDir;
     private final String fileSeparator = System.getProperty("file.separator");
+    private final OS os = OS.getOS(System.getProperty("os.name"));
+
+    public static enum OS {
+        WINDOWS(".bat"), UNIX(".sh");
+
+        private final String scriptExtension;
+
+        private OS(String scriptExtension) {
+            this.scriptExtension = scriptExtension;
+        }
+
+        private static OS getOS(String system) {
+            return system.startsWith("Windows") ? OS.WINDOWS : OS.UNIX;
+        }
+
+        public String scriptExtension() {
+            return scriptExtension;
+        }
+    }
 
     private void defaultInit() {
         tomcatDir = null;
@@ -86,6 +105,10 @@ public class Config {
 
     public String fileSeparator() {
         return fileSeparator;
+    }
+
+    public OS os() {
+        return os;
     }
 
     public static void main (String[] args) {
