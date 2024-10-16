@@ -1,8 +1,9 @@
 # Maven
 effective-pom.xml
-target/*
+target/
 
 # IDE
-.vscode/*
+.vscode/
 
-
+# Generated binary files
+*.tar.gz
