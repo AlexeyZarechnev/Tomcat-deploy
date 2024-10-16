@@ -101,6 +101,7 @@ public class TomcatUtils
     {
         if (args.length == 0) {
             System.err.println("Invalid arguments! Usage: java -jar tomcat-utils.jar <method> [options]");
+            return;
         }
         Config config = new Config(System.getProperty("java.class.path"));
         Util util = parseArguments(args);
