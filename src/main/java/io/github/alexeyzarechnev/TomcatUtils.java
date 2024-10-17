@@ -33,9 +33,12 @@ public class TomcatUtils
         if (args.length != 1) {
             System.err.println("Incorrect options! Expected: no options");
         }
+        File deployment = new File(new File(config.getTomcatDir(), "webapps"), config.getDeployment().getName());
+        if (deployment.exists()) {
+            deployment.delete();
+        }
         try {
-            Files.copy(config.getDeployment().toPath(), new File(new File(config.getTomcatDir(), "webapps"), 
-                    config.getDeployment().getName()).toPath());
+            Files.copy(config.getDeployment().toPath(), deployment.toPath());
         } catch (IOException e) {
             e.printStackTrace();
         }
